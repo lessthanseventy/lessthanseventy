@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
+import styles from './index.module.scss'
 import Hero from '../components/hero'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
@@ -14,7 +15,7 @@ class RootIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <div style={{ background: '#fff' }}>
+        <div className={styles.mainWrapper}>
           <Helmet title={siteTitle} />
           <Hero data={author.node} />
           <div className="wrapper">
@@ -22,7 +23,13 @@ class RootIndex extends React.Component {
             <ul className="article-list">
               {posts.map(({ node }) => {
                 return (
-                  <li key={node.slug}>
+                  <li
+                    key={node.slug}
+                    data-sal-duration="1000"
+                    data-sal-delay="100"
+                    data-sal="zoom-out"
+                    data-sal-easing="ease-in-out-back"
+                  >
                     <ArticlePreview article={node} />
                   </li>
                 )
@@ -47,8 +54,8 @@ export const pageQuery = graphql`
           publishDate(formatString: "MMMM Do, YYYY")
           tags
           heroImage {
-            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-              ...GatsbyContentfulFluid_tracedSVG
+            fluid(maxWidth: 385, maxHeight: 215, resizingBehavior: SCALE) {
+              ...GatsbyContentfulFluid
             }
           }
           description {

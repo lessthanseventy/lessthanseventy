@@ -1,0 +1,15 @@
+{
+  "forms": {
+    "contact": {
+      "name": "Contact Form",
+      "actions": [
+        {
+          "app": "mailchimp",
+          "type": "addOrUpdateContact",
+          "audience": "lessthanseventy",
+          "apiKey": "$GATSBY_MAILCHIMP_APIKEY"
+        }
+      ]
+    }
+  }
+}

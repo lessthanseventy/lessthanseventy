@@ -13,7 +13,7 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <div style={{ background: '#fff' }}>
+        <div className={styles.blogWrapper}>
           <Helmet title={siteTitle} />
           <div className={styles.hero}>Blog</div>
           <div className="wrapper">

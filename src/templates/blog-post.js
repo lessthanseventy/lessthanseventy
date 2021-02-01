@@ -5,7 +5,7 @@ import get from 'lodash/get'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 
-import heroStyles from '../components/hero.module.css'
+import styles from './blog-post.module.scss'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -14,11 +14,11 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <div style={{ background: '#fff' }}>
+        <div className={styles.postWrapper}>
           <Helmet title={`${post.title} | ${siteTitle}`} />
-          <div className={heroStyles.hero}>
+          <div className={styles.hero}>
             <Img
-              className={heroStyles.heroImage}
+              className={styles.heroImage}
               alt={post.title}
               fluid={post.heroImage.fluid}
             />
@@ -33,6 +33,7 @@ class BlogPostTemplate extends React.Component {
               {post.publishDate}
             </p>
             <div
+              className={styles.thePostBody}
               dangerouslySetInnerHTML={{
                 __html: post.body.childMarkdownRemark.html,
               }}

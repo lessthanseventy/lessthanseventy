@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "moduleResolution", node,
+        target": "es2017",
+     "noImplicitAny": false,
+     "allowSyntheticDefaultImports": true,
+     "noEmit": true,
+     "checkJs": true,
+     "jsx": "react",
+     "lib": [ "dom", "es2017" ]
+   }
+}

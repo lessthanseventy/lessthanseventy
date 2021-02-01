@@ -1,17 +1,23 @@
 import React from 'react'
-import './base.css'
+import './base.scss'
 import Container from './container'
 import Navigation from './navigation'
+import { GeistProvider, CssBaseline, Page } from '@geist-ui/react'
+import { divide } from 'lodash'
 
 class Template extends React.Component {
   render() {
     const { children } = this.props
 
     return (
-      <Container>
+      <GeistProvider>
+        <CssBaseline />
         <Navigation />
-        {children}
-      </Container>
+        <Container>{children}</Container>
+        <Page.Footer>
+          <p>Andrew Moore</p>
+        </Page.Footer>
+      </GeistProvider>
     )
   }
 }

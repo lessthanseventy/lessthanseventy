@@ -1,20 +1,25 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
+import { Card, Text } from '@geist-ui/react'
 
-import styles from './article-preview.module.css'
+import styles from './article-preview.module.scss'
 
 export default ({ article }) => (
-  <div className={styles.preview}>
-    <Img alt="" fluid={article.heroImage.fluid} />
-    <h3 className={styles.previewTitle}>
-      <Link to={`/blog/${article.slug}`}>{article.title}</Link>
-    </h3>
-    <small>{article.publishDate}</small>
+  <Card width="360px" className={styles.card} shadow>
+    <Link to={`/blog/${article.slug}`}>
+      <div className={styles.headerWrapper}>
+        <h3 className={styles.previewTitle}>{article.title}</h3>
+      </div>
+      <Img alt="" fluid={article.heroImage.fluid} />
+    </Link>
     <p
       dangerouslySetInnerHTML={{
         __html: article.description.childMarkdownRemark.html,
       }}
     />
-  </div>
+    <Card.Footer>
+      <small>{article.publishDate}</small>
+    </Card.Footer>
+  </Card>
 )

@@ -2,13 +2,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 61.8vh;
-  max-height: 400px;
+  height: 12.5em;
   background: #e1e1e1;
-  font-size: 2em;
-  overflow: hidden;
 }
 
-.blogWrapper {
+.postWrapper {
     background: var(--main-bg-color);
+    color: var(--secondary-text-color);
+}
+
+.thePostBody {
+    max-width: 100ch;
+    margin: 0 auto;
 }
