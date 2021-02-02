@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet'
 import styles from './index.module.scss'
 import Hero from '../components/hero'
 import Layout from '../components/layout'
-import ArticlePreview from '../components/article-preview'
+import ArticleList from '../components/article-list'
 
 class RootIndex extends React.Component {
   render() {
@@ -18,24 +18,7 @@ class RootIndex extends React.Component {
         <div className={styles.mainWrapper}>
           <Helmet title={siteTitle} />
           <Hero data={author.node} />
-          <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
-            <ul className="article-list">
-              {posts.map(({ node }) => {
-                return (
-                  <li
-                    key={node.slug}
-                    data-sal-duration="1000"
-                    data-sal-delay="100"
-                    data-sal="zoom-out"
-                    data-sal-easing="ease-in-out-back"
-                  >
-                    <ArticlePreview article={node} />
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
+          <ArticleList data={posts} />
         </div>
       </Layout>
     )
@@ -46,7 +29,15 @@ export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allContentfulBlogPost(
+      sort: { fields: [publishDate], order: DESC }
+      limit: 3
+    ) {
       edges {
         node {
           title

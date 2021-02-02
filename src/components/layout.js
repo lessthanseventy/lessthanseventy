@@ -14,9 +14,7 @@ class Template extends React.Component {
         <CssBaseline />
         <Navigation />
         <Container>{children}</Container>
-        <Page.Footer>
-          <p>Andrew Moore</p>
-        </Page.Footer>
+        <Page.Footer></Page.Footer>
       </GeistProvider>
     )
   }

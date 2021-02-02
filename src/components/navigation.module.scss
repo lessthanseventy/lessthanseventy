@@ -16,5 +16,9 @@
 }
 
 .navigationItem a {
-  color: var(--main-text-color);
+    color: var(--main-text-color);
+    &:hover {
+        text-decoration: underline !important;
+        color: white;
+    }
 }

@@ -11,6 +11,7 @@
     --secondary-text-color: #333;
     --main-bg-color: #DDD;
     --secondary-bg-color: #222;
+    --main-accent-color: #555
 }
 
 body {
@@ -89,4 +90,14 @@ ul, ol {
 
   ul li::before {
       content: none !important;
+  }
+
+/**
+* DiscussionEmbed
+*/
+
+  #disqus_thread {
+      width: 110ch;
+      max-width: 90vw;
+      margin: 0 auto;
   }
