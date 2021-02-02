@@ -2,12 +2,6 @@ require('dotenv').config({
   path: `.env`,
 })
 
-if (!spaceId || !accessToken) {
-  throw new Error(
-    'Contentful spaceId and the access token need to be provided.'
-  )
-}
-
 module.exports = {
   siteMetadata: {
     title: 'lessthanseventy',
