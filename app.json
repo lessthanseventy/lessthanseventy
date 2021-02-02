@@ -1,13 +1,13 @@
 {
-  "name": "Contentful Gatsby Starter",
-  "description": "Gatsby starter for a Contentful project.",
+  "name": "lessthanseventy",
+  "description": "A Better Future in Sight",
   "keywords": [
     "contentful",
     "gatsby",
     "static",
     "ssg"
   ],
-  "repository": "https://github.com/contentful-userland/gatsby-contentful-starter",
+  "repository": "https://github.com/lessthanseventy/lessthanseventy",
   "success_url": "/",
   "buildpacks": [
     {
