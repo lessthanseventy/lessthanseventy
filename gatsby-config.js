@@ -2,10 +2,6 @@ require('dotenv').config({
   path: `.env`,
 })
 
-const contentfulConfig = {}
-
-const { spaceId, accessToken } = contentfulConfig
-
 if (!spaceId || !accessToken) {
   throw new Error(
     'Contentful spaceId and the access token need to be provided.'
@@ -25,8 +21,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        spaceId: 'popyfhidhmvs',
+        accessToken: 'NgFm9Vc97HE7K50N5MHexYutzMoyuSVSgeg6QzkoKYs',
       },
     },
     `gatsby-plugin-sass`,
