@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import styles from './contact-form.module.scss'
 import { Input, Textarea, Button } from '@geist-ui/react'
-import { useForm } from '@formspree/react'
 
 const ContactForm = function () {
   return (

@@ -20,21 +20,21 @@
             margin-bottom: 1rem;
         }
         & .formButton {
+            box-sizing: border-box;
             width: 100%;
         }
     }
 }
 
 @media (max-width: 600px) {
+    .formWrapper {
+        width: 100%;
+    }
     .formWrapper form {
         margin-left: 0;
         width: 100%;
-        margin-bottom: 2rem;
         & .formInput, .formTextarea {
             width: 100%;
-        }
-        & .formButton {
-            right: 2px;
         }
     }
 }
