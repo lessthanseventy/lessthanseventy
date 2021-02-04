@@ -1,15 +1,15 @@
 {
-  "forms": {
-    "contact": {
-      "name": "Contact Form",
-      "actions": [
-        {
-          "app": "mailchimp",
-          "type": "addOrUpdateContact",
-          "audience": "lessthanseventy",
-          "apiKey": "$GATSBY_MAILCHIMP_APIKEY"
+    "forms": {
+        "contact": {
+            "name": "Contact Form",
+            "fields": {
+                "email": { "type": "email", "required": true },
+                "message": { "type": "text", "required": true }
+            },
+            "actions": [
+                { "type": "email", "to": "andrew@lessthanseventy.com" }
+            ],
+            "allowExtraFields": false
         }
-      ]
     }
-  }
 }

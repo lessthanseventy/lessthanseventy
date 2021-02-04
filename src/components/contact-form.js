@@ -2,46 +2,18 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import styles from './contact-form.module.scss'
 import { Input, Textarea, Button } from '@geist-ui/react'
+import { useForm } from '@formspree/react'
 
-function ContactForm() {
-  const [serverState, setServerState] = useState({
-    submitting: false,
-    status: null,
-  })
-  const handleServerResponse = (ok, msg, form) => {
-    setServerState({
-      submitting: false,
-      status: { ok, msg },
-    })
-    if (ok) {
-      form.reset()
-    }
-  }
-  const handleOnSubmit = (e) => {
-    e.preventDefault()
-    const form = e.target
-    setServerState({ submitting: true })
-    axios({
-      method: 'post',
-      url: 'https://formspree.io/f/xaylkbbz',
-      data: new FormData(form),
-    })
-      .then((r) => {
-        handleServerResponse(true, 'Thanks!', form)
-      })
-      .catch((r) => {
-        handleServerResponse(false, r.response.data.error, form)
-      })
-  }
+const ContactForm = function () {
   return (
     <div className={styles.formWrapper}>
-      <form onSubmit={handleOnSubmit}>
+      <form method="post" action="https://formspree.io/f/mzbkwvab">
         <Input
           className={styles.formInput}
           label="E-Mail:"
           id="email"
           type="email"
-          name="email"
+          name="_replyto"
           placeholder="bojack@hollywoo.com"
           required
         />
@@ -51,18 +23,7 @@ function ContactForm() {
           id="message"
           name="message"
         />
-        <Button
-          className={styles.formButton}
-          type="submit"
-          disabled={serverState.submitting}
-        >
-          Submit
-        </Button>
-        {serverState.status && (
-          <p className={!serverState.status.ok ? 'errorMsg' : ''}>
-            {serverState.status.msg}
-          </p>
-        )}
+        <input className={styles.formButton} type="submit" value="Submit" />
       </form>
     </div>
   )
