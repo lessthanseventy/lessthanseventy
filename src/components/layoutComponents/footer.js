@@ -6,7 +6,7 @@ import { AiOutlineFacebook } from '@react-icons/all-files/ai/AiOutlineFacebook'
 import { VscFilePdf } from '@react-icons/all-files/vsc/VscFilePdf'
 import { FiTwitter } from '@react-icons/all-files/fi/FiTwitter'
 import { SiGatsby } from '@react-icons/all-files/si/SiGatsby'
-import Resume from '../assets/Moore_Andrew_Resume.pdf'
+import Resume from '../../assets/Moore_Andrew_Resume.pdf'
 
 export default () => (
   <div className={styles.footerWrapper}>

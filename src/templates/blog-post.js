@@ -5,7 +5,7 @@ import get from 'lodash/get'
 import Img from 'gatsby-image'
 import { DiscussionEmbed } from 'disqus-react'
 
-import Layout from '../components/layout'
+import Layout from '../components/layoutComponents/layout'
 
 import styles from './blog-post.module.scss'
 

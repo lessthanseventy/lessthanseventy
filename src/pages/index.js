@@ -1,15 +1,14 @@
-import React from 'react'
+import { Card } from '@geist-ui/react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
+import React from 'react'
 import { Helmet } from 'react-helmet'
-import { Grid, Card } from '@geist-ui/react'
-import Img from 'gatsby-image'
-import MyFace from '../assets/my_face.jpeg'
 import Bojack from '../assets/bojack.png'
+import MyFace from '../assets/my_face.jpeg'
+import ContactForm from '../components/indexComponents/contact-form'
+import Hero from '../components/layoutComponents/hero'
+import Layout from '../components/layoutComponents/layout'
 import styles from './index.module.scss'
-import Hero from '../components/hero'
-import Layout from '../components/layout'
-import ContactForm from '../components/contact-form'
 
 class RootIndex extends React.Component {
   render() {
