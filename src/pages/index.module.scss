@@ -1,3 +1,55 @@
 .mainWrapper {
-    background: var(--main-bg-color)
+    background: var(--main-bg-color);
+    padding: 1rem;
+}
+
+.indexCard {
+    width: 90%;
+    max-width: 125ch;
+    margin: 4rem auto 2rem auto!important;
+    & > div {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        & p {
+            margin-left: 1rem;
+            &:first-child {
+                margin-top: 0 !important;
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    .indexCard {
+        & .myFace {
+            margin-bottom: 1rem;
+        }
+        & > div {
+            flex-flow: column nowrap;
+        }
+    }
+}
+
+.myFace {
+    width: 10rem !important;
+    height: 10rem;
+}
+
+.bottomWrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.bojack {
+    width: 40%;
+}
+@media (max-width: 600px) {
+    .bottomWrapper {
+        flex-direction: column-reverse
+    }
+    .bojack {
+        width: 100%;
+        margin: 2rem 0;
+    }
 }
