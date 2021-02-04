@@ -11,14 +11,6 @@ export default ({ data }) => (
       <h4 className={styles.heroTitle}>{data.title}</h4>
       <p>{data.shortBio.shortBio}</p>
     </div>
-    <AiOutlineDown
-      style={{
-        height: 40,
-        width: 40,
-        position: 'absolute',
-        bottom: '1rem',
-      }}
-      color="white"
-    />
+    <AiOutlineDown className={styles.heroIcon} color="white" />
   </div>
 )

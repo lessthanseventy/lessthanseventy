@@ -26,7 +26,7 @@ class RootIndex extends React.Component {
             <img className={styles.myFace} alt="My Face" src={MyFace} />
             <div className={styles.indexCardTextWrapper}>
               <p>
-                As it says up there 🠕 my name is Andrew, and I like to make
+                As it says up there ⬆ my name is Andrew, and I like to make
                 things. Would you believe that this site was made by someone who
                 is severely visually impaired? If so... ouch. If not... thanks!
                 😊
