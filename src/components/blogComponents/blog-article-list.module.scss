@@ -45,7 +45,9 @@
             }
             & div p {
                 color: var(--main-text-color);
-                filter: brightness(55%)
+                filter: brightness(55%);
+                margin: 0 !important;
+                line-height: 1.25rem;
             }
         }
         & img {
