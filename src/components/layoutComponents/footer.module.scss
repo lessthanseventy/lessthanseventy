@@ -54,8 +54,8 @@
 }
 
 .footerIcon:hover {
-    fill: rgb(0, 112, 243);
-    transform: scale(1.25)
+    fill: var(--main-accent-color);
+    transform: scale(1.25);
 }
 .footerIcon {
     transition: all 1s;

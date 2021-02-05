@@ -1,6 +1,15 @@
 .formWrapper {
     height: 100%;
     width: 40%;
+    & p {
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.75rem;
+        color: var(--main-success-color);
+        &.error {
+            color: var(--main-error-color);
+        }
+    }
     & form {
         display: flex;
         position: relative;
