@@ -9,10 +9,6 @@
     width: calc(100% - 10vmin);
     margin: 0 auto;
     & li {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: center;
         box-sizing: border-box !important;
         width: 100%;
         max-width: 110ch;
@@ -28,19 +24,29 @@
             0 11.4px 11.6px -5px rgba(0, 0, 0, 0.119),
             0 21.3px 21.7px -5px rgba(0, 0, 0, 0.144),
             0 51px 52px -5px rgba(0, 0, 0, 0.2) !important;
+        & a {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+
+        }
         & .imageWrapper {
-            width: 160px;
+            display: flex;
+            align-items: center;
+            width: 12.5rem;
             margin-right: 1rem;
         }
         & .descWrapper {
             width: 100%;
-        }
-        & h3 {
-            font-weight: bold;
-        }
-        & a > div {
-            width: 150px;
-            height: 150px;
+            & h3 {
+                font-weight: bold;
+                color: var(--secondary-text-color)
+            }
+            & div p {
+                color: var(--main-text-color);
+                filter: brightness(55%)
+            }
         }
         & img {
             top: .5rem !important;
@@ -52,9 +58,11 @@
     .articleList {
         margin: 0 auto !important;
         & li {
-            flex-flow: column nowrap;
             margin-left: auto;
             margin-right: auto;
+            & a {
+                flex-flow: column nowrap;
+            }
             & .descWrapper {
                 margin-top: 1rem;
             }
