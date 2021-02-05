@@ -17,12 +17,14 @@
 }
 
 body {
-  font-family: "Atkinson", Tahoma, Arial, Helvetica, sans-serif !important;
   font-size: 1em;
   line-height: 1.65;
   color: var(--main-text-color);
   background: var(--secondary-bg-color) !important;
   margin: 0;
+  & * {
+      font-family: Atkinson, Tahoma, Arial, Helvetica, sans-serif !important;
+  }
 }
 
 img {
