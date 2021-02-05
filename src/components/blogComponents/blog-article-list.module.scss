@@ -1,6 +1,13 @@
+.pageWrapper {
+    width: calc(100% - 10vmin);
+    margin: 0 auto;
+    padding: 5vmin 0;
+    background: var(--main-bg-color)
+}
+
 .articleList {
-    width: 100%;
-    margin: 0;
+    width: calc(100% - 10vmin);
+    margin: 0 auto;
     & li {
         display: flex;
         flex-flow: row nowrap;
@@ -21,8 +28,6 @@
             0 11.4px 11.6px -5px rgba(0, 0, 0, 0.119),
             0 21.3px 21.7px -5px rgba(0, 0, 0, 0.144),
             0 51px 52px -5px rgba(0, 0, 0, 0.2) !important;
-
-                    
         & .imageWrapper {
             width: 160px;
             margin-right: 1rem;
@@ -45,7 +50,7 @@
 
 @media (max-width: 600px) {
     .articleList {
-        margin: 0 !important;
+        margin: 0 auto !important;
         & li {
             flex-flow: column nowrap;
             margin-left: auto;

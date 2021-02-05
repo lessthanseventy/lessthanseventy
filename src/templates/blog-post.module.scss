@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 12.5em;
   background: #e1e1e1;
 }
 
@@ -14,4 +13,7 @@
 .thePostBody {
     max-width: 100ch;
     margin: 0 auto;
+    & h2:not(:first-of-type) {
+        margin: 2rem 0 -1rem 0;
+    }
 }

@@ -22,6 +22,9 @@ class BlogPostTemplate extends React.Component {
             <Img
               className={styles.heroImage}
               alt={post.title}
+              style={{
+                width: '100%',
+              }}
               fluid={post.heroImage.fluid}
             />
           </div>
