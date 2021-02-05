@@ -6,7 +6,7 @@
     background-size: cover;
     position: relative;
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .hero {
         background-position: 1% center !important;
     }

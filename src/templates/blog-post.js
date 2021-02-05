@@ -24,6 +24,7 @@ class BlogPostTemplate extends React.Component {
               alt={post.title}
               style={{
                 width: '100%',
+                maxHeight: '40vh',
               }}
               fluid={post.heroImage.fluid}
             />

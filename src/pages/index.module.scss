@@ -19,7 +19,7 @@
         }
     }
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .indexCard {
         & .myFace {
             margin-bottom: 1rem;
@@ -42,9 +42,9 @@
     justify-content: center;
 }
 .bojack {
-    width: 40%;
+    width: 50%;
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .bottomWrapper {
         flex-direction: column-reverse
     }

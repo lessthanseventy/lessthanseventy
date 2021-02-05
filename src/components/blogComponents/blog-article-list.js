@@ -4,7 +4,7 @@ import { Card } from '@geist-ui/react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 export default ({ data }) => (
-  <div className="pageWrapper">
+  <div className={styles.pageWrapper}>
     <h2 className="section-headline">Recent articles</h2>
     <ul className={styles.articleList}>
       {data.map(({ node }, index) => {
