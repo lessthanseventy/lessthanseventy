@@ -24,9 +24,14 @@
     }
     & pre {
         background: var(--secondary-bg-color);
+        margin: 2rem;
         & code {
             font-family: monospace !important;
             color: var(--main-text-color);
         }
+    }
+    & img {
+        width: 75%;
+        margin: 2rem auto;
     }
 }
