@@ -7,6 +7,9 @@ defmodule Lessthanseventy.Application do
 
   @impl true
   def start(_type, _args) do
+    # Run Migrations
+    Lessthanseventy.Release.migrate()
+
     children = [
       # Start the Telemetry supervisor
       LessthanseventyWeb.Telemetry,

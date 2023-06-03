@@ -32,6 +32,7 @@ defmodule Lessthanseventy.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:credo, ">= 0.0.0"},
       {:ecto_sqlite3, ">= 0.0.0"},
       {:esbuild, "~> 0.5", runtime: Mix.env() == :dev},
       {:finch, "~> 0.13"},

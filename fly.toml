@@ -1,0 +1,28 @@
+# fly.toml app configuration file generated for lessthanseventy on 2023-06-03T17:32:54-06:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "lessthanseventy"
+primary_region = "den"
+kill_signal = "SIGTERM"
+
+[mounts]
+  source = "lessthanseventy_data"
+  destination = "/data"
+
+[env]
+  DATABASE_PATH = "/data/lessthanseventy_data/lessthanseventy_prod.db"
+  PHX_HOST = "lessthanseventy.fly.dev"
+  PORT = "8080"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  [http_service.concurrency]
+    type = "connections"
+    hard_limit = 1000
+    soft_limit = 1000
